@@ -1,0 +1,66 @@
+/* www.cssmatic.com crear sombras de forma visual */
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #e4e2e2;
+}
+h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+/* colocar las imagenes responsive */
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* blog definir una altura fija */
+.blog {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* tendremos algunos post a la derecha */
+    /* jugar con la altura para obtener un mejor estilo Masonry */
+    max-height: 5000px;
+}
+
+/* Cada entrada definir un ancho */
+.entrada {
+    /* se colocan una al lado de la otra */
+    /* las imagenes se ven encimadas por que no son reponsive */
+    width: calc(50% - 1rem) ;
+    margin-bottom: 1rem;
+    -webkit-box-shadow: 0px 0px 44px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 44px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 44px -12px rgba(0,0,0,0.75);
+}
+
+@media screen and (min-width: 768px){
+    .blog {
+        max-height: 2500px;
+    }
+    /* Cada entrada definir un ancho */
+    .entrada {
+    /* se colocan una al lado de la otra */
+    /* las imagenes se ven encimadas por que no son reponsive */
+    width: calc(33% - 1rem) ;
+    }
+}
+
+
+
+
+
